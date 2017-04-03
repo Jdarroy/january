@@ -65,12 +65,13 @@ public class BasicExample {
 		System.out.println("slice of dataset: \n" + slice.toString(true));
 
 
-		// Random dataset
+		// Range dataset
 		Dataset a = DatasetFactory.createRange(15).reshape(3, 5);
-		Dataset rand = Random.rand(new int[]{3,4});
+		System.out.println("Range dataset: \n"+a.toString(true));
 		
-		System.out.println("Random dataset:");
-		System.out.println(a.toString(true)+"\n"+rand.toString(true));
+		// Random dataset
+		Dataset rand = Random.rand(new int[]{3,4});
+		System.out.println("Random dataset: \n"+rand.toString(true));
 		
 		
 		// for more examples, see the other java files in this project
