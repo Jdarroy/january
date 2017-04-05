@@ -1,0 +1,491 @@
+
+<!-------------------------------------------------------------------------------
+ - Copyright (c) 2013, 2014 The Eclipse Scout Team and UT-Battelle, LLC.
+ - All rights reserved. This program and the accompanying materials
+ - are made available under the terms of the Eclipse Public License v1.0
+ - which accompanies this distribution, and is available at
+ - http://www.eclipse.org/legal/epl-v10.html
+ -
+ - Contributors:
+ -   Initial API and implementation and/or initial documentation: The Eclipse
+ -   Scout Team
+ -   Modifications for the Eclipse ICE website: Jay Jay Billings
+ -
+ - Author Note:
+ -   This page was largely developed by copying code from www.jayjaybillings.org
+ -   and from www.eclipse.org/scout. In both cases, style files and html were
+ -   modified. Some parts of the code may be taken from the original Eclipse ICE
+ -   website, which was developed by Christopher Guindon and Taylor Patterson.
+ -
+ -   Jay Jay Billings, 20161016
+ ------------------------------------------------------------------------------->
+
+<!-- HTML5 Doc Type Declaration -->
+<!DOCTYPE html>
+<html>
+
+<!-- Create the header -->
+<head>
+
+<!-- Set the metadata type and the browser title -->
+<meta charset="utf-8">
+<title>Eclipse January</title>
+
+<!-- This next bit adds all the little browser favicons that show up in tabs
+and bookmarks and other such things. -->
+<link rel="icon" type="image/png" sizes="192x192"
+	href="images/logo-eclipse2.png">
+
+
+
+
+<!-- Bootstrap CSS file link. This is Bootstrap 3.0.2, not 2.3.2! -->
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+<!-- Stylesheet from Bootstrap examples to pad the navbar -->
+<link href="css/navbar.css" rel="stylesheet" type="text/css">
+<!-- Extra style file with custom settings from Eclipse Scouts -->
+<link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+
+<!-- Create the body -->
+<body>
+
+	<!-- This file includes the two main parts of the body section of each page -
+the navbar and the carousel. -->
+
+	<!-- Create the Navbar -->
+	<nav class="navbar navbar-default" role="navigation">
+		<!-- Create the outermost container that will center everything -->
+		<div class="container">
+			<!-- Add the header -->
+			<div class="navbar-header">
+				<div class="navbar-header">
+					<!-- This adds a button to toggle nav bar -->
+					<button type="button" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<!-- Insert a logo with a link to the intro section -->
+					<a href="#intro">
+            <img src="images/eclipse3.png" alt="">
+          </a>
+				</div>
+			</div>
+			<!-- Add the links -->
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+
+					<li><a href="#section-whatis">What is January</a></li>
+
+					<li><a href="#why">Why use it</a></li>
+
+					<li><a href="#try">Try it out</a></li>
+
+          <li><a href="#download">Download</a></li>
+
+          <li><a href="#whos">Who's involved</a></li>
+
+          <li><a href="#dev">developer resources</a></li>
+
+          <li><a href="#gov">Governance</a></li>
+
+          <li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+			<!-- End container -->
+		</div>
+		<!-- End Navbar -->
+	</nav>
+
+	<!-- Start the "intro" banner image section -->
+	<div class="wrapper">
+		<div class="intro" id="intro">
+			<div class="intro-image">
+				<img src="images/home2.jpg" width="400" height="300" alt="" />
+				<!-- End intro-image -->
+			</div>
+			<!-- This section creates the text in the middle -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="intro-inner">
+							<div class="intro-content">
+								<h1>Eclipse January</h1>
+								<p>Java Data Structures for Science</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End intro -->
+		</div>
+
+
+		<!-- All of the "real" content of the site below the central image starts here. -->
+		<div class="main">
+			<div class="content">
+
+
+				<!-- Start the "What is January?" section -->
+				<section class="section-whatis" id="section-whatis">
+					<div class="container">
+						<div class="row">
+							<div class="section-head">
+								<h3>What is January ?</h3>
+                <p>
+								Eclipse January is a set of libraries for handling numerical data in Java. It is inspired in part by NumPy and aims to provide similar functionality.
+                </p>
+								<!--  End section-head -->
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Start the "Who's involved" section -->
+				<div class="white-spacer" id="why"></div>
+				<section class="section-with-image" id="section-why">
+					<div class="container">
+						<div class="row">
+
+							<!-- This is the left side of the row where the text goes -->
+							<div class="col-md-9">
+								<div class="section-imagine-on-right-content">
+									<h2>
+										<b>WHY USE IT</b>
+									</h2>
+									<p>
+										<b>Familiar.</b> Provide familiar functionality, especially to NumPy users.
+		                </br>
+		                <b>Robust.</b> Has test suite and is used in production heavily at Diamond Light Source.
+		                </br>
+		                <b>No more passing double[].</b> IDataset provide a consistent object for basing APIs on with significantly improved clarity over using double arrays or similar.
+		                </br>
+		                <b>Optimized.</b> Optimized for speed and getting better all the time.
+		                </br>
+		                <b>Scalable.</b> Allows handling of data sets larger than available memory with "Lazy Datasets".
+		                </br>
+		                <b>Focus on your algorithms.</b> By reusing this library it allows you to focus on your code.
+		                </br>
+                  </p>
+									<!-- End section-who's involved-content -->
+								</div>
+								<!-- End content column -->
+							</div>
+
+							<!--  The is the right side of the row where the image goes -->
+							<div class="col-md-3">
+								<div class="section-imagine-on-right-image">
+									<img class="img-responsive"
+										src="images/flat/png/zoom-in.png" alt="" />
+									<!-- End section-define-problems-image -->
+								</div>
+								<!-- End image column.. -->
+							</div>
+
+							<!-- End row -->
+						</div>
+						<!-- End container-->
+					</div>
+					<!-- End section define problems -->
+				</section>
+
+				<!-- Start the "Who's involved" section -->
+				<div class="white-spacer" id="try"></div>
+				<section class="section-with-image" id="section-try">
+					<div class="container">
+						<div class="row">
+							<!--  The is the right side of the row where the image goes -->
+							<div class="col-md-3">
+								<div class="section-imagine-on-right-image">
+									<img class="img-responsive"
+										src="images/flat/png/gamepad.png" alt="" />
+									<!-- End section-define-problems-image -->
+								</div>
+								<!-- End image column.. -->
+							</div>
+
+							<!-- This is the left side of the row where the text goes -->
+							<div class="col-md-9">
+								<div class="section-imagine-on-right-content">
+									<h2>
+										<b>TRY IT OUT</b>
+									</h2>
+									<p>
+										<a href="https://github.com/eclipse/january/tree/master/org.eclipse.january.examples#eclipse-january-examples-and-getting-started"><b>► Getting Started Guide.</b></a>
+		                </br>
+		                <b>Browse through the examples:</b>
+		                </br>
+		                <a href="https://github.com/jonahkichwacoders/org.eclipse.dataset.examples/blob/master/org.eclipse.dataset.examples/src/org/eclipse/dawnsci/analysis/examples/dataset/BasicExample.java"><b>Basic Example</b></a> show simple concepts for array creation, maths and slicing.
+		                </br>
+		                <a href="https://github.com/eclipse/january/blob/master/org.eclipse.january.examples/src/org/eclipse/january/examples/dataset/NumpyExamples.java"><b>NumPy Examples</b></a> show how common NumPy constructs map to Eclipse Datasets.
+		                </br>
+		                <a href="https://github.com/eclipse/january/blob/master/org.eclipse.january.examples/src/org/eclipse/january/examples/dataset/SlicingExamples.java"><b>Slicing Examples</b></a> demonstrate slicing, including how to slice a small amount of data out of a dataset too large to fit in memory all at once.
+		                </br>
+		                <a href="https://github.com/eclipse/january/blob/master/org.eclipse.january.examples/src/org/eclipse/january/examples/dataset/ErrorExamples.java"><b>Error Examples</b></a> demonstrate applying an error to datasets.
+		                </br>
+		                <a href="https://github.com/eclipse/january/blob/master/org.eclipse.january.examples/src/org/eclipse/january/examples/dataset/IterationExamples.java"><b>Iteration Examples</b></a> demonstrate a few ways to iterate through your datasets.
+		                </br>
+		                <a href="https://github.com/eclipse/january/blob/master/org.eclipse.january.examples/src/org/eclipse/january/examples/dataset/LazyExamples.java"><b>Lazy Examples</b></a> demonstrate how to use datasets which are not entirely loaded in memory.
+                  </p>
+									<!-- End section-who's involved-content -->
+								</div>
+								<!-- End content column -->
+							</div>
+
+							<!-- End row -->
+						</div>
+						<!-- End container-->
+					</div>
+					<!-- End section define problems -->
+				</section>
+
+				<!-- Start the "Download" section -->
+				<div class="white-spacer" id="download"></div>
+				<section class="section-with-image" id="section-download">
+					<div class="container">
+						<div class="row">
+							<!-- This is the left side of the row where the text goes -->
+							<div class="col-md-9">
+								<div class="section-imagine-on-right-content">
+									<h2>
+										<b>DOWNLOADS</b>
+									</h2>
+									<p>
+                    Update Sites:
+                    </br>
+                    Eclipse January Latest Integration Build:
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://download.eclipse.org/january/builds/january-master/latest/repository">http://download.eclipse.org/january/builds/january-master/latest/repository</a>
+                    </br>
+                    Eclipse January 2.0.1:
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://download.eclipse.org/january/releases/2.0.1/repository">http://download.eclipse.org/january/releases/2.0.1/repository</a>
+                    </br>
+                    Eclipse January 2.0.0 (Older release):
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://download.eclipse.org/january/releases/2.0.1/repository">http://download.eclipse.org/january/releases/2.0.1/repository</a>
+                    </br>
+                    Eclipse January 1.0.0 (Older release):
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://download.eclipse.org/january/releases/1.0.0/repository">http://download.eclipse.org/january/releases/1.0.0/repository</a>
+                    </br></br>
+                    Downloads:
+                    </br>
+                    <a href="https://www.eclipse.org/downloads/download.php?file=/january/builds/january-master/latest/repository.zip">Eclipse January Latest Integration Build Repository (zip)</a>
+                    </br>
+                    <a href="https://www.eclipse.org/downloads/download.php?file=/january/releases/2.0.1/repository.zip">Eclipse January 2.0.1 Repository (zip)</a>
+                    </br>
+                    <a href="https://www.eclipse.org/downloads/download.php?file=/january/releases/2.0.0/repository.zip">Eclipse January 2.0.0 Repository (zip) (Older release)</a>
+                    </br>
+                    <a href="https://www.eclipse.org/downloads/download.php?file=/january/releases/1.0.0/repository.zip">Eclipse January 1.0.0 Repository (zip) (Older release)</a>
+                  </p>
+									<!-- End section-define-problems-content -->
+								</div>
+								<!-- End content column -->
+							</div>
+							<!-- End right col -->
+
+							<!--  The is the right side of the row where the image goes -->
+							<div class="col-md-3">
+								<div class="section-imagine-on-right-image">
+									<img class="img-responsive"
+										src="images/flat/png/download.png" alt="" />
+									<!-- End section-define -->
+								</div>
+								<!-- End image column.. -->
+							</div>
+							<!-- End row -->
+						</div>
+						<!-- End container-->
+					</div>
+					<!-- End section define problems -->
+				</section>
+
+				<!-- Start the "Who's involved" section -->
+				<div class="white-spacer" id="whos"></div>
+				<section class="section-with-image" id="section-whos">
+					<div class="container">
+						<div class="row">
+							<!--  The is the right side of the row where the image goes -->
+							<div class="col-md-3">
+								<div class="section-imagine-on-right-image">
+									<img class="img-responsive"
+										src="images/flat/png/group.png" alt="" />
+									<!-- End section-define-problems-image -->
+								</div>
+								<!-- End image column.. -->
+							</div>
+
+							<!-- This is the left side of the row where the text goes -->
+							<div class="col-md-9">
+								<div class="section-imagine-on-right-content">
+									<h2>
+										<b>WHO'S INVOLVED</b>
+									</h2>
+									<p>
+                    blablabla
+                  </p>
+									<!-- End section-who's involved-content -->
+								</div>
+								<!-- End content column -->
+							</div>
+
+							<!-- End row -->
+						</div>
+						<!-- End container-->
+					</div>
+					<!-- End section define problems -->
+				</section>
+
+				<!-- Start the "Developer resources" section -->
+				<div class="white-spacer" id="dev"></div>
+				<section class="section-with-image" id="section-dev">
+					<div class="container">
+						<div class="row">
+							<!-- This is the left side of the row where the text goes -->
+							<div class="col-md-9">
+								<div class="section-imagine-on-right-content">
+									<h2>
+										<b>DEVELOPER RESOURCES</b>
+									</h2>
+									<p>
+                    blablalba
+                  </p>
+									<!-- End section-developer-resources-content -->
+								</div>
+								<!-- End content column -->
+							</div>
+
+							<!--  The is the right side of the row where the image goes -->
+							<div class="col-md-3">
+								<div class="section-imagine-on-right-image">
+									<img class="img-responsive"
+										src="images/flat/png/light-bulb-1.png" alt="" />
+									<!-- End section-developer resources-image -->
+								</div>
+								<!-- End image column.. -->
+							</div>
+							<!-- End row -->
+						</div>
+						<!-- End container-->
+					</div>
+					<!-- End section define problems -->
+				</section>
+
+				<!-- Start the "Governance" section -->
+				<div class="white-spacer" id="gov"></div>
+				<section class="section-with-image" id="section-gov">
+					<div class="container">
+						<div class="row">
+							<!--  The is the right side of the row where the image goes -->
+							<div class="col-md-3">
+								<div class="section-imagine-on-right-image">
+									<img class="img-responsive"
+										src="images/flat/png/computer.png" alt="" />
+									<!-- End section-Governance-image -->
+								</div>
+								<!-- End image column.. -->
+							</div>
+
+							<!-- This is the left side of the row where the text goes -->
+							<div class="col-md-9">
+								<div class="section-imagine-on-right-content">
+									<h2>
+										<b>GOVERNANCE</b>
+									</h2>
+									<p>
+                    blablabla
+                  </p>
+									<!-- End section-governance-content -->
+								</div>
+								<!-- End content column -->
+							</div>
+
+							<!-- End row -->
+						</div>
+						<!-- End container-->
+					</div>
+					<!-- End section define problems -->
+				</section>
+
+				<!-- Start the "Contact" section -->
+				<div class="white-spacer" id="contact"></div>
+				<section class="section-contact" id="contact-us">
+					<div class="container">
+						<h2>Contact Us</h2>
+						<!-- GMail address -->
+						<div class="row">
+							<div class="col-md-3 contact">
+								<a href="mailto:eclipse.ice.project@gmail.com" target="_top"><img
+									src="images/flat/mail.png" alt="Direct
+									Email"></a>
+							</div>
+							<!-- User's list -->
+							<div class="col-md-3 contact">
+								<a href="https://dev.eclipse.org/mailman/listinfo/ice-users">
+									<img src="images/flat/users.png" alt="User's List">
+								</a>
+							</div>
+							<!-- Developer's list-->
+							<div class="col-md-3 contact">
+								<a href="https://dev.eclipse.org/mailman/listinfo/ice-dev">
+									<img src="images/flat/dev.png" alt="Dev List">
+								</a>
+							</div>
+							<!-- Bugs-->
+							<div class="col-md-3 contact">
+								<a href="https://github.com/eclipse/ice/issues"><img
+									src="images/flat/issues.png" alt="Reports Bugs"></a>
+							</div>
+						</div>
+					</div>
+					<!-- /.container -->
+				</section>
+				<!-- /.section-contact -->
+
+
+
+				<!-- End content -->
+			</div>
+			<!-- End main -->
+		</div>
+
+		<!-- This is the footer at the very bottom of the page with the legal information -->
+		<footer class="footer">
+			<a href="#" class="footer-toggler">show/hide footer</a> <a
+				target="_blank" href="http://www.eclipse.org" class="lnk-footer">Eclipse
+				Home</a> <a target="_blank"
+				href="http://www.eclipse.org/legal/privacy.php" class="lnk-footer">Privacy
+				Policy</a> <a target="_blank"
+				href="http://www.eclipse.org/legal/termsofuse.php"
+				class="lnk-footer">Terms of Use</a> <a target="_blank"
+				href="http://www.eclipse.org/legal/copyright.php" class="lnk-footer">Copyright
+				Agent</a> <a target="_blank" href="http://www.eclipse.org/legal"
+				class="lnk-footer">Legal</a>
+
+			<!-- We'll add these back later.
+			    <a target="_blank" href="https://twitter.com/EclipseScout" class="btn-social"><i class="fa fa-twitter-square"></i></a>
+				<a target="_blank" href="http://www.bsi-software.com/scout" class="btn-social"><i class="fa fa-rss-square"></i></a>
+				<a target="_blank" href="https://plus.google.com/103593107241008270960" class="btn-social"><i class="fa fa-google-plus-square"></i></a>
+				<a target="_blank" href="https://www.facebook.com/EclipseScout" class="btn-social"><i class="fa fa-facebook-square"></i></a>
+				<a target="_blank" href="https://www.youtube.com/user/eclipsescout" class="btn-social"><i class="fa fa-youtube-square"></i></a>
+			-->
+			<!-- End the footer -->
+		</footer>
+
+		<!-- End wrapper -->
+	</div>
+
+	<!-- Include JQuery and Bootstrap scripts. Putting them at the end preserves
+		website performance (the heavy stuff loads last). JQuery must be loaded
+		before bootstrap. -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+	<!-- End the body -->
+</body>
+
+<!-- End the document -->
+</html>

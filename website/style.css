@@ -1,0 +1,435 @@
+/*-------------------------------------------------------------------------------
+ - Copyright (c) 2013, 2014 The Eclipse Scout Team and UT-Battelle, LLC.
+ - All rights reserved. This program and the accompanying materials
+ - are made available under the terms of the Eclipse Public License v1.0
+ - which accompanies this distribution, and is available at
+ - http://www.eclipse.org/legal/epl-v10.html
+ -
+ - Contributors:
+ -   Initial API and implementation and/or initial documentation: The Eclipse
+ -   Scout Team
+ -   Modifications for the Eclipse ICE website: Jay Jay Billings
+ -
+ - Author Note:
+ -   This page was largely developed by copying code from www.jayjaybillings.org
+ -   and from www.eclipse.org/scout. In both cases, style files and html were
+ -   modified. Some parts of the code may be taken from the original Eclipse ICE
+ -   website, which was developed by Christopher Guindon and Taylor Patterson.
+ -
+ -   Jay Jay Billings, 20161016
+ ------------------------------------------------------------------------------*/
+
+/* ==========================================================================
+	#Reset
+========================================================================== */
+* { padding: 0; margin: 0; outline: 0; }
+
+/* ==========================================================================
+	#Base
+========================================================================== */
+html,
+body { height: 100%; }
+
+/* These are the default parameters for the <body></body> tags. */
+body { background: #223660; font-family: 'Open Sans', sans-serif; font-size: 17px; line-height: 1.1; color: #676767; min-width: 320px; }
+
+a { cursor: pointer; }
+/* a:hover { text-decoration: underline; } */
+
+img { border: 0; vertical-align: middle; }
+
+ul,
+ol { list-style-position: inside; }
+
+/* This is a custom space to add the white horizontal bars between sections */
+.white-spacer { position: relative; z-index: 3; background: #fff; padding: 25px; }
+
+/* ==========================================================================
+	#Helpers
+========================================================================== */
+.alignleft { float: left; }
+.alignright { float: right; }
+
+.clearfix:before,
+.clearfix:after { display: table; content: ' '; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* ==========================================================================
+	#Base "Wrapper" This is the container "behind" everything.
+========================================================================== */
+.wrapper { position: relative; z-index: 2; left: 0%; background: #223660; height: 100%; overflow: auto; overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+
+.radio label,
+.checkbox label { padding-left: 0; }
+.custom-checkbox input { opacity: 0; filter: alpha(opacity=0); position: absolute; }
+.custom-checkbox-fake { float: left; width: 21px; height: 21px; margin-right: 10px; background: url(images/sprite.png) -441px -79px no-repeat; }
+.custom-input-checked .custom-checkbox-fake { background: url(images/sprite.png) -466px -79px no-repeat; }
+.custom-input-disabled .custom-checkbox-fake { opacity: .5; filter: alpha(opacity=50); }
+
+/* ==========================================================================
+	#Icons
+========================================================================== */
+.ico { display: inline-block; background: url(images/sprite.png) no-repeat; vertical-align: middle; }
+
+.ico-download { width: 60px; height: 60px; background-position: -60px -170px; }
+.ico-circle-graph { width: 69px; height: 75px; background-position: -103px 0px; }
+.ico-contacts-fax { width: 16px; height: 16px; margin-top: -3px; background-position: -442px -44px; }
+.ico-contacts-phone { width: 15px; height: 15px; margin-top: -3px; background-position: -460px -44px; }
+.ico-graph { width: 54px; height: 75px; background-position: -71px -93px; }
+.ico-hand { width: 66px; height: 75px; background-position: -174px 0px; }
+.ico-list { width: 58px; height: 60px; background-position: 0px -170px; }
+.ico-monitor-small { width: 66px; height: 75px; background-position: -174px -77px; }
+.ico-monitor { width: 66px; height: 60px; background-position: -122px -170px; }
+.ico-mouse { width: 21px; height: 91px; background-position: 0px 0px; }
+.ico-note { width: 69px; height: 75px; background-position: 0px -93px; }
+.ico-play { width: 78px; height: 78px; margin-bottom: 11px; background-position: -23px 0px; }
+
+/* ==========================================================================
+	#Buttons
+========================================================================== */
+.btn { display: inline-block; }
+
+.btn-default { color: #fff; background-color: transparent; margin: 5px; margin-right: 5px; border: 1px solid #fff; border-radius: 5px; font-size: 19px; font-weight: 500; }
+.btn-default:hover { background: #fff; border-color: #fff; }
+
+/* ==========================================================================
+	#Header
+========================================================================== */
+/* Default navbar settings like background color, branding image, etc. */
+.navbar { z-index: 3; position: absolute; top: 0; right: 17px; min-height: 0; width: 99%; margin-bottom: 0; padding: 17px 0; border: none; border-radius: 0; }
+.navbar-default { background-color: #223660; border-color: #223660; }
+.navbar-header { overflow: hidden; }
+.navbar-brand { overflow: hidden; float: left; height: 60px; width: 256px; background: url("images/eclipse.png") 0 0 no-repeat; text-indent: 150%; white-space: nowrap; }
+
+.navbar>.container .navbar-brand { margin-top: 0px; margin-left: 0; }
+
+/* Link colors for navbar elements. */
+.navbar-nav { float: right; }
+.navbar-default .navbar-nav  li a { color: #fff; }
+.navbar-default .navbar-nav  li a:hover { color: #faa635; }
+
+/* woud be nice to have dark transparent menu background when menu is displayed over header image, and white background otherwise
+.nav .dropdown:hover { background-color: rgba(96,96,96,0.8); display: block; border-top-left-radius: 5px; border-top-right-radius: 5px; }
+*/
+.nav .affix-top & .dropdown-menu { background-color: rgba(255, 255, 255, 0.75);}
+.nav .affix & .dropdown-menu { background-color: rgba(255, 255, 255);}
+
+.nav .dropdown:hover { display: block; border-radius: 5px; }
+.nav .dropdown:hover a { color: #0184a3; }
+.nav .dropdown:hover ul { color: #0184a3; display: block; border: 1px; }
+
+.nav .dropdown li a:hover { color: #faa635; }
+.nav .dropdown li a { color: #faa635; }
+.nav .dropdown ul a { color: #fff; background-color: #fff; }
+.nav .dropdown ul a:hover { color: #faa635; }
+
+.navbar-nav > li > .dropdown-menu { border-radius: 4px; }
+
+.navbar.affix { position: fixed; background: #fff; }
+.navbar.affix .navbar-nav > li > a { color: #0184a3; }
+.navbar.affix .navbar-nav > li > a:hover,
+.navbar.affix .navbar-nav > li > a:focus { color: #faa635; }
+.navbar.affix .navbar-nav .dropdown-menu { border: 0; }
+
+.nav-mobile { position: fixed; top: 0; right: 0; width: 70%; height: 100%; overflow: auto; background: #faa635; z-index: 1; display: none; }
+.nav-mobile ul { list-style: none outside none; display: block; margin-bottom: 0; }
+.nav-mobile a { display: block; color: #fff; padding: 10px; }
+.nav-mobile a:hover { text-decoration: none; background: #e39731; }
+.nav-mobile ul ul a { padding: 10px 15px; }
+.nav-mobile > ul > li > a { font-size: 20px; }
+
+/* ==========================================================================
+	#Intro - That is, the picture and text in the middle!
+========================================================================== */
+.intro { position: relative; z-index: 1; min-height: 626px; }
+.intro-image { position: absolute; top: 80px; left: 0; min-width: 100%; min-height: 100%; }
+.intro .container { position: absolute; top: 299px; width: 100%; z-index: 2; text-align: center; }
+.intro-image img { height: 626px; width: 100%; }
+
+/* This is the style of the main, white "Eclipse ICE" text */
+.intro-content h1 { margin: 33px 0 0; font-family: 'Dax-Regular', sans-serif; font-size: 55px; color: #fff; }
+/* This is the style of the subtitle */
+.intro-content p { margin-bottom: 40px; font-size: 24px; color: #B0F7D5; }
+.intro-actions a { display: inline-block; margin-bottom: 61px; font-size: 16px; color: #fff; text-decoration: none; }
+
+.fsr-container { overflow: hidden; background-repeat: no-repeat; background-size: cover; }
+.fsr-image { position: absolute; }
+.fsr-hidden { display: none; }
+
+/* ==========================================================================
+	#Section Why use it?
+========================================================================== */
+.section-why { padding: 80px 0 62px; }
+.section-why .section-head h3 {margin-bottom: 33px; font-family: 'Dax-Regular', sans-serif; font-size: 45px; color: #fff; text-align: left; }
+.section-why .section-head h3 span { color: #fff; font-weight: bold; }
+.section-why .section-head p { color: #fff; font-weight: bold; text-align: left}
+.why { text-align: left; float: left; width: 20%; padding: 0 2%; color: #585858; }
+.why-head { cursor: pointer; }
+.why-title { margin: 14px 0; font-size: 25px; line-height: 0.92; }
+.why-head:hover  { color: #0087b1; }
+.section-why .ico-wrapper { display: inline-block; width: 99px; height: 99px; padding-top: 12px; border-radius: 9px; background: #f9a535; text-align: left; }
+.section-why p { line-height: 1.24; font-size: 16px; text-align: left }
+
+.why-entries { position: relative; overflow: hidden; }
+.why-entry { position: absolute; left:0; top: 0; min-height: 82px; width:100%; padding: 10px 35px 0; display: none;  zoom: 1; }
+.why-entry-visible { position: relative; display: block; z-index: 2 }
+.why.current h5 { color: #03556f; }
+
+.why .why-entry { display: none; }
+
+
+/* ==========================================================================
+	#Section Try it out
+========================================================================== */
+.section-try { padding: 80px 0 62px; }
+.section-try .section-head h3 {margin-bottom: 33px; font-family: 'Dax-Regular', sans-serif; font-size: 45px; color: #fff; text-align: left; }
+.section-try .section-head h3 span { color: #fff; font-weight: bold; }
+.section-try .section-head p { color: #fff; font-weight: bold; text-align: left}
+.try { text-align: left; float: left; width: 20%; padding: 0 2%; color: #585858; }
+.try-head { cursor: pointer; }
+.try-title { margin: 14px 0; font-size: 25px; line-height: 0.92; }
+.try-head:hover  { color: #0087b1; }
+.section-try .ico-wrapper { display: inline-block; width: 99px; height: 99px; padding-top: 12px; border-radius: 9px; background: #f9a535; text-align: left; }
+.section-try p { line-height: 1.24; font-size: 16px; text-align: left }
+
+.try-entries { position: relative; overflow: hidden; }
+.try-entry { position: absolute; left:0; top: 0; min-height: 82px; width:100%; padding: 10px 35px 0; display: none;  zoom: 1; }
+.try-entry-visible { position: relative; display: block; z-index: 2 }
+.try.current h5 { color: #03556f; }
+
+.try .try-entry { display: none; }
+
+
+/* ==========================================================================
+	#Section What is January?
+========================================================================== */
+.section-whatis { padding: 80px 0 62px; }
+.section-whatis .section-head h3 {margin-bottom: 33px; font-family: 'Dax-Regular', sans-serif; font-size: 45px; color: #fff; text-align: left; }
+.section-whatis .section-head h3 span { color: #fff; font-weight: bold; }
+.section-whatis .section-head p { color: #fff; font-weight: bold; text-align: left}
+.whatis { text-align: left; float: left; width: 20%; padding: 0 2%; color: #585858; }
+.whatis-head { cursor: pointer; }
+.whatis-title { margin: 14px 0; font-size: 25px; line-height: 0.92; }
+.whatis-head:hover  { color: #0087b1; }
+.section-whatis .ico-wrapper { display: inline-block; width: 99px; height: 99px; padding-top: 12px; border-radius: 9px; background: #f9a535; text-align: left; }
+.section-whatis p { line-height: 1.24; font-size: 16px; text-align: left }
+
+.whatis-entries { position: relative; overflow: hidden; }
+.whatis-entry { position: absolute; left:0; top: 0; min-height: 82px; width:100%; padding: 10px 35px 0; display: none;  zoom: 1; }
+.whatis-entry-visible { position: relative; display: block; z-index: 2 }
+.whatis.current h5 { color: #03556f; }
+
+.whatis .whatis-entry { display: none; }
+
+
+/* ==========================================================================
+	#Section Download
+========================================================================== */
+.section-download { position: relative; padding: 50px 0 50px; background: #eee;}
+.section-download h2 { margin: -5px 0 1px; font-family: 'Dax-Regular', sans-serif; font-size: 40px; color: #585858; }
+.section-download h4 { margin: 14px 0 14px 0; font-size: 21px; color: #fff; font-weight: 800; }
+.section-download p { font-size: 21px; color: #474747; line-height: 1.2; }
+.section-download .checkbox { margin-top: 38px; }
+.section-download label { color: #474747; }
+
+.section-with-image-actions { margin-top: 26px; }
+.section-with-image-actions .btn-default { min-width: 287px; margin-bottom: 10px; padding: 7px 22px 9px 22px; border-width: 2px; }
+
+
+/* ==========================================================================
+	#Section who's involved
+========================================================================== */
+.section-whos { position: relative; padding: 50px 0 50px; background: #eee;}
+.section-whos h2 { margin: -5px 0 1px; font-family: 'Dax-Regular', sans-serif; font-size: 40px; color: #585858; }
+.section-whos h4 { margin: 14px 0 14px 0; font-size: 21px; color: #fff; font-weight: 800; }
+.section-whos p { font-size: 21px; color: #474747; line-height: 1.2; }
+.section-whos .checkbox { margin-top: 38px; }
+.section-whos label { color: #474747; }
+
+/* ==========================================================================
+	#Section Developer resources
+========================================================================== */
+.section-dev { position: relative; padding: 50px 0 50px; background: #eee;}
+.section-dev h2 { margin: -5px 0 1px; font-family: 'Dax-Regular', sans-serif; font-size: 40px; color: #585858; }
+.section-dev h4 { margin: 14px 0 14px 0; font-size: 21px; color: #fff; font-weight: 800; }
+.section-dev p { font-size: 21px; color: #474747; line-height: 1.2; }
+.section-dev .checkbox { margin-top: 38px; }
+.section-dev label { color: #474747; }
+
+
+/* ==========================================================================
+	#Section governance
+========================================================================== */
+.section-gov { position: relative; padding: 50px 0 50px; background: #eee;}
+.section-gov h2 { margin: -5px 0 1px; font-family: 'Dax-Regular', sans-serif; font-size: 40px; color: #585858; }
+.section-gov h4 { margin: 14px 0 14px 0; font-size: 21px; color: #fff; font-weight: 800; }
+.section-gov p { font-size: 21px; color: #474747; line-height: 1.2; }
+.section-gov .checkbox { margin-top: 38px; }
+.section-gov label { color: #474747; }
+
+
+/* ==========================================================================
+	#Section Contact
+========================================================================== */
+.section-contact { padding: 36px 0 74px; background: #5d5d5d; font-family: 'Dax-Regular', sans-serif; font-size: 45px; color: #fff; text-align: center; }
+.contact a { font-size: 24px; font-family: 'Dax-Regular', sans-serif; font-size: 18px; color: #fff; text-align: center;}
+.form-contact .form-head { margin-bottom: 20px; text-align: center; }
+.form-contact h3 { margin-bottom: 3px; font-family: 'Dax-Regular', sans-serif; font-size: 45px; color: #fff; }
+.form-contact h3 span { color: #fe9915; font-weight: bold; }
+.form-contact p { font-size: 18px; color: #fff; }
+
+.form-contact .has-error input { border-width: 3px; }
+
+.form-contact .field,
+.form-contact .textarea { margin-top: 11px; padding-left: 40px; font-size: 15px; }
+.form-contact .form-control { height: 45px; }
+.form-contact .textarea { height: 84px; resize: none; }
+
+#fname { background: #fff url(images/ico-user.png) 14px 14px no-repeat; }
+#phone { background: #fff url(images/ico-phone.png) 14px 14px no-repeat; }
+#lname { background: #fff url(images/ico-user.png) 14px 14px no-repeat; }
+#email { background: #fff url(images/ico-mail.png) 12px 14px no-repeat; }
+#message { background: #fff url(images/ico-pen.png) 12px 7px no-repeat; }
+
+.form-contact .checkbox { margin-top: 23px; }
+.form-label { font-size: 19px; color: #fff; }
+.form-label span { color: #ffae44; text-transform: uppercase; }
+
+.form-contact .form-actions { margin-top: 21px; text-align: center; }
+.form-contact .btn-default { padding: 7px 22px 9px 22px; min-width: 200px; border-width: 2px; float: right; }
+.form-contact .btn-default:hover { background: #e49326; border-color: #e49326; }
+
+/* ==========================================================================
+	#Footer
+========================================================================== */
+.footer { padding: 35px 0 31px; background: #223660; }
+.footer h5 { margin-bottom: 20px; font-size: 20px; color: #B0F7D5; }
+.footer-nav ul { list-style: none outside none; }
+.footer-nav li ~ li { margin-top: 2px; }
+.footer-nav a { font-size: 16px; color: #B0F7D5; text-decoration: none; }
+.footer-nav a:hover { color: #ffba60; }
+
+.contacts { font-size: 15px; color: #fff; }
+.contacts p { line-height: 1.3; }
+.contacts .phone { margin-top: 21px; font-size: 18px; line-height: 1.55; }
+.contacts .phone ~ .phone { margin: 0; }
+
+.footer-socials ul { overflow: hidden; list-style: none outside none; }
+.footer-socials li { float: left; }
+.footer-socials li ~ li { margin-left: 2px; }
+.social-label { display: block; margin: 10px 0 18px; font-size: 20px; color: #fff; }
+
+.link-facebok,
+.link-twitter,
+.link-blog { overflow: hidden; display: block; width: 53px; height: 53px; background: url(images/sprite.png) no-repeat; border: 2px solid #fff; border-radius: 5px; text-indent: 100%; white-space: nowrap; }
+.link-facebok { background-position: -284px -82px; }
+.link-twitter { background-position: -325px -85px; }
+.link-blog { background-position: -246px -81px; }
+.link-facebok:hover,
+.link-twitter:hover,
+.link-blog:hover  { background-color: #fe9915; border-color: #fe9915; }
+
+/* font awesome chars see http://astronautweb.co/snippet/font-awesome/ */
+.footer a { color:#B0F7D5; vertical-align: middle; }
+.lnk-footer { padding-left: 10px; padding-right: 10px; font-size:16px; color: #B0F7D5;}
+.btn-social { padding-left: 5px; font-size:30px; }
+.fa{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.fa-twitter-square:before{content:"\f081"; color: #fff;}
+.fa-rss-square:before{content:"\f143 "; color: #fff;}
+.fa-google-plus-square:before{content:"\f0d4"; color: #fff;}
+.fa-facebook-square:before{content:"\f082"; color: #fff;}
+.fa-youtube-square:before{content:"\f166"; color: #fff;}
+
+.percentage-content { padding-top: 25px; }
+.footer-toggler { display: none; }
+
+.mfp-iframe-holder { padding: 0 70px; }
+.mfp-iframe-holder .mfp-content { max-width: 1400px; }
+
+@media (max-width: 1200px) {
+	.benefit-entry { padding-right: 13px; padding-left: 13px; }
+	.section-testimonials .section-head h3 { font-size: 43px; }
+	.list-partners li ~ li { margin-left:20px; }
+	/* .testimonial blockquote { min-height: 201px; } */
+	.contacts .phone { font-size: 16px; }
+	.footer h5 { font-size: 17px; }
+}
+
+@media (max-width: 992px) {
+	.benefit-entry { padding-right: 0; padding-left: 0; }
+	/* .testimonial blockquote { min-height: 262px; } */
+
+	.list-partners { text-align: center; }
+	.list-partners li { float: none; display: inline-block; padding: 10px 0; }
+}
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+	.footer-socials li { float: none; margin-bottom: 5px; }
+	.footer-socials li ~ li { margin-left: 0; }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+	.dropdown:last-child .dropdown-menu { left: -70px !important; }
+}
+
+@media (max-width: 767px) {
+
+    #cboxTitle { visibility: hidden; }
+
+    .demo-btn-mobile { visibility: hidden; }
+
+	.nav-mobile { display: block; }
+
+	.is-affixed .nav-mobile > ul { padding-top: 71px; }
+	/* .navbar { width: 97%; } there must be a better solution ... */
+	.navbar.affix { left: 0 !important; }
+
+	.mfp-iframe-holder { padding: 0 20px 0 5px; }
+
+	.header { background: transparent; }
+	.navbar-header { padding-left: 15px; }
+	.navbar-brand { width: 256px; height: 42px; margin-top: 10px; margin-left: 15px !important; background: url("images/eclipse.png");}
+
+	.navbar-toggle { float: right; margin: 5px 10px 0 0; border: 2px; }
+	.navbar-toggle .icon-bar { height: 3px; }
+
+	.navbar-collapse { background: #2a1f1a; }
+	.navbar-nav { float: none; }
+
+	.intro { min-height: 530px !important; }
+	.intro .container { top: 100px; }
+	.intro-content h1 { font-size: 30px; }
+	.intro-content p { font-size: 18px; margin-bottom: 60px; }
+	.intro-actions a { margin-bottom: 75px; }
+
+	.section-demo-image,
+	.section-with-image-image,
+	.section-tutorials-image { text-align: center; }
+	.section-download-image { padding-top: 25px; }
+	.section-demo-image img,
+	.section-download-image img,
+	.section-tutorials-image img { display: inline-block; }
+
+	.benefit { width: auto; float: none; padding: 10px 25px; }
+	.section-benefits { padding-bottom: 20px; }
+	.benefit > .benefit-entry { display: block; }
+	.benefit-entries { display: none !important; }
+
+	.feature-image { padding-bottom: 15px; text-align: center; }
+	.feature-image img { display: inline-block; }
+
+	.list-partners li:nth-child(odd) { margin-left: 0; }
+
+	.testimonial blockquote { min-height: 0; }
+	.section-testimonials .testimonial { padding-bottom: 20px; }
+	.section-testimonials { padding-bottom: 20px }
+
+	.footer ul { padding-bottom: 20px; }
+
+	.footer-bar { padding: 10px; }
+	.footer-bar-logo { float: left; display: block; }
+
+	.footer { padding-left: 50px; }
+}
